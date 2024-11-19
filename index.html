@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Trip Jupen - Home</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="background">
+        <!-- start navbar -->
+        <section id="home">
+            <nav>
+                <div class="logo">
+                    <img src="/assets/foto.jpeg" alt="logo">
+                </div>
+                <div id="menu-icon" class="menu-icon">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul id="nav-links" class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#packages">Our Package</a></li>
+                    <li><a href="#contact">Call Us</a></li>
+                </ul>
+            </nav>
+        </section>
+        <!-- end of navbar -->
+         
+        <!-- start header left -->
+        <h1 class="title">OPEN TRIP JUPEN</h1>
+        <p class="description">Enjoy an unforgettable vacation experience with Open Trip Jupen</p>
+        <div class="container">
+            <div class="card-user-wrapper">
+                <div class="card">
+                    <img src="/assets/about1.jpeg" alt="Tour">
+                    <p>"Vacation fun with my open trip."</p>
+                    <div class="user">
+                        <img src="/assets/foto.jpeg" alt="User  ">
+                        <div class="user-info">
+                            <p class="username">Deriljupen</p>
+                            <p class="user-details">Mahasiswa, 21</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of header left -->
+
+            <!-- start header right form -->
+            <section id="contact">
+                <div class="form-container">
+                    <h2>Contact Us</h2>
+                    <p>Sales will contact you 1X24 hour after we receive the data. Please fill in the form:</p>
+                    <form id="contactForm" onsubmit="return validateForm()">
+                        <div class="form-group">
+                            <label for="name">Your Name:</label>
+                            <input type="text" placeholder="Name" required>
+                            <div id="nameError" class="error-message"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email address:</label>
+                            <input type="email" placeholder="Email" required>
+                            <div id="emailError" class="error-message"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="interest">What your interseted in?</label>
+                            <select id="interest" required>
+                                <option value="">Select Option</option>
+                                <option value="tour">Tour</option>
+                                <option value="adventure">Adventure</option>
+                                <option value="cultural">Cultural</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div id="interestError" class="error-message"></div>
+                        </div>
+
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </section>    
+            <!-- end of header right form -->
+
+            <!-- start feature -->
+            <div class="feature-container">
+                <h2>Open Trip Jupen</h2>
+                <i>Experienced in <span style="color: yellow"> 10+</span> intercity trips in Indonesia</i>
+                <div class="feature">
+                  <span class="number">1</span>
+                  <span class="feature-text">Special offers for you on every trip with us!</span>
+                </div>
+                <div class="feature">
+                  <span class="number">2</span>
+                  <span class="feature-text">Excitement, togetherness and moments!</span>
+                </div>
+                <div class="feature">
+                  <span class="number">3</span>
+                  <span class="feature-text">we are ready and willing to take you around the beauty of nature!</span>
+                </div>
+            </div>  
+            <!-- end of feature -->
+
+        </div>
+        <!-- start package -->
+        <section id="packages">
+            <div class="package">
+                <h2 class="packages-tittle">Our Packages</h2>
+                <div class="packages-wrapper">
+                    <div class="package-bundle">
+                        <div class="package-item">
+                            <span class="material-icons">stars</span>
+                            <p class="caption">Bali</p>
+                        </div>
+                        <div>
+                            <img src="/assets/bali.jpeg" alt="Bali" class="package-image">
+                            <p class="package-description">A pleasant trip to the city of Bali that you can get a variety of beautiful moments that will be immortalized.</p>
+                        </div>
+                    </div>
+                    <div class="package-bundle">
+                        <div class="package-item">
+                            <span class="material-icons">stars</span>
+                            <p class="caption">Bandung</p>
+                        </div>
+                        <div>
+                            <img src="/assets/bandung.jpeg" alt="Bandung" class="package-image">
+                            <p class="package-description">a pleasant trip to the quiet city of bandung. you can get a trip that is not available in other cities.</p>
+                        </div>
+                    </div>
+                    <div class="package-bundle">
+                        <div class="package-item">
+                            <span class="material-icons">lightbulb_circle</span>
+                            <p class="caption">Mount Merbabu</p>
+                        </div>
+                        <div> 
+                            <img src="/assets/merbabu.jpeg" alt="Mount Merbabu" class="package-image">
+                            <p class="package-description">hike to Mount Merbabu, with various stories, experiences and also togetherness.</p>
+                        </div>
+                    </div>            
+                </div>
+            </div>    
+        </section> 
+
+        <!-- end of our packages -->
+
+        <!-- start about -->
+        <div class="about-section">
+            <h2>About Us</h2>
+            <p>We are one of the open trips with various destinations, ranging from mountain climbing trips, exploring various cities to the world. If you are interested in using our services, also contact us now.</p>
+            <a href="#contact" class="contact-btn">Contact me</a>
+        </div>
+        <!-- end of about -->
+
+        <!-- start footer -->
+        <footer>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#packages">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <p>© Code with Open Trip Jupen | All right reserved</p>
+        </footer>
+        <!-- end of footer -->
+        
+    </div>
+    
+    <script src="/script.js"></script> 
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
