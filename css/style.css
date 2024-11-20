@@ -1,13 +1,16 @@
+/* mengatur box-sizing untuk semua elemen */
 * {
     box-sizing: border-box;
 }
 
+/* mengatur margin dan font untuk body */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     text-align: center;
 }
 
+/* mengatur latar belakang dengan gradient */
 .background {
     height: 100%;
     width: 100%;
@@ -15,6 +18,7 @@ body {
     background: linear-gradient(135deg, #FAF0E6, #B9B4C7, #5C5470, #ecdfcc);
 }
 
+/* mengatur tampilan navigasi */
 nav {
     display: flex;
     width: 100%;
@@ -23,6 +27,7 @@ nav {
     padding: 1rem 2rem;
 }
 
+/* mengatur tampilan daftar menu dalam navigasi */
 nav ul {
     display: flex;
     align-items: center;
@@ -30,11 +35,13 @@ nav ul {
     list-style: none;
 }
 
+/* mengatur ukuran gambar logo dalam navigasi */
 nav div img {
     width: 50px;
     border-radius: 100px;
 }
 
+/* mengatur tampilan tautan menu dalam navigasi */
 nav ul li a {
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -46,17 +53,20 @@ nav ul li a {
     border-bottom: 1px solid rgba(255, 68, 0, 0);
 }
 
+/* mengatur efek hover pada tautan menu */
 nav ul li a:hover {
     color: #e6dcdc;
     border-bottom: 1px solid #e6dcdc;
 }
 
+/* mengatur tampilan ikon menu */
 .menu-icon {
     font-size: 24px;
     display: none;
     cursor: pointer;
 }
 
+/* mengatur tampilan tautan navigasi */
 .nav-links {
     display: flex;
     list-style: none;
@@ -66,27 +76,30 @@ nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0);
 }
 
+/* mengatur tampilan judul */
 .title {
     margin-top: 40px;
     font-size: 36px;
     color: #333;
 }
 
+/* mengatur tampilan deskripsi */
 .description {
     margin-top: 10px;
     font-size: 18px;
     color: rgba(51, 51, 51, 0.6);
 }
 
+/* mengatur tampilan kontainer */
 .container {
     display: flex;
     padding: 20px;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
     margin: 20px 5vw;
     flex-wrap: wrap;
 }
 
+/* mengatur tampilan wrapper pengguna */
 .card-user-wrapper {
     display: flex;
     flex-direction: column;
@@ -95,6 +108,7 @@ nav ul li a:hover {
     margin: 10px;
 }
 
+/* mengatur tampilan kartu */
 .card {
     padding: 10px;
     text-align: center;
@@ -102,42 +116,91 @@ nav ul li a:hover {
     max-width: 100%;
     overflow: hidden;
     background-color: #f9f9f900;
-    object-fit: cover;
 }
 
-.card img {
-    width: 400px;
+/* mengatur tampilan slider */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px; /* untuk memberikan efek sudut yang halus */
+}
+
+/* mengatur tampilan slides dalam slider */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* mengatur tampilan setiap slide */
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+/* mengatur tampilan tombol prev dan next dalam slider */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10; /* agar tombol berada di atas gambar */
+}
+
+/* mengatur posisi tombol prev */
+.prev {
+    left: 10px;
+}
+
+/* mengatur posisi tombol next */
+.next {
+    right: 10px;
+}
+
+/* mengatur tampilan gambar dalam slide */
+.slide img {
+    width: 100%;
     height: auto;
-    max-width: 100%;
-    object-fit: cover;
+    object-fit: cover; /* menjaga proporsi gambar */
 }
 
+/* mengatur tampilan pengguna */
 .user {
     display: flex;
     justify-content: center;
 }
 
+/* mengatur tampilan informasi pengguna */
 .user-info {
     margin: 10px;
 }
 
+/* mengatur tampilan nama pengguna */
 .username {
     margin: 0;
     text-align: left;
     font-weight: bold;
 }
 
+/* mengatur tampilan detail pengguna */
 .user-details {
     margin: 0;
     font-size: 0.9em;
 }
 
+/* mengatur ukuran gambar pengguna */
 .user img {
     width: 40px;
     height: 40px;
     margin-right: 10px;
 }
 
+/* mengatur tampilan kontainer formulir */
 .form-container {
     display: flex;
     flex-direction: column;
@@ -150,20 +213,24 @@ nav ul li a:hover {
     max-width: 600px;
 }
 
+/* mengatur tampilan grup formulir */
 .form-group {
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
 }
 
+/* mengatur tampilan judul dalam formulir */
 .form-container h2 {
     margin-bottom: 2rem;
 }
 
+/* mengatur tampilan paragraf dalam formulir */
 .form-container p {
     margin-bottom: 2rem;
 }
 
+/* mengatur tampilan label dalam formulir */
 .form-container label {
     text-align: left;
     font-size: 16px;
@@ -171,10 +238,12 @@ nav ul li a:hover {
     margin: 10px;
 }
 
+/* mengatur tampilan select dalam formulir */
 .form-container select {
     margin-top: 2rem;
 }
 
+/* mengatur tampilan input, select, dan button dalam formulir */
 .form-container input, 
 .form-container select, 
 .form-container button {
@@ -186,12 +255,14 @@ nav ul li a:hover {
     font-size: 16px;
 }
 
+/* mengatur tampilan placeholder dalam input dan select */
 .form-container input::placeholder, 
 .form-container select::placeholder {
     color: rgba(51, 51, 51, 0.6);
     font-size: 16px;
 }
 
+/* mengatur tampilan button dalam formulir */
 .form-container button {
     background-color: #333;
     color: white;
@@ -200,6 +271,14 @@ nav ul li a:hover {
     font-size: 16px;
 }
 
+/* mengatur tampilan pesan kesalahan */
+.error-message {
+    color: red; /* warna merah untuk pesan kesalahan */
+    font-size: 0.9rem; /* ukuran font untuk pesan kesalahan */
+    margin-top: 5px; /* jarak di atas pesan kesalahan */
+}
+
+/* mengatur tampilan kontainer fitur */
 .feature-container {
     flex-direction: column;
     align-items: flex-start;
@@ -210,12 +289,14 @@ nav ul li a:hover {
     order: 1;
 }
 
+/* mengatur tampilan judul dalam kontainer fitur */
 .feature-container h2 {
     margin-left: 0;
     padding-left: 10px;
     font-size: 18px;
 }
 
+/* mengatur tampilan fitur */
 .feature {
     display: flex;
     align-items: flex-start;
@@ -227,6 +308,7 @@ nav ul li a:hover {
     font-size: 18px;
 }
 
+/* mengatur tampilan nomor dalam fitur */
 .number {
     display: inline-block;
     width: 40px;
@@ -241,6 +323,7 @@ nav ul li a:hover {
     margin-right: 20px;
 }
 
+/* mengatur tampilan teks dalam fitur */
 .feature-text {
     display: flex;
     flex: 1;
@@ -250,11 +333,13 @@ nav ul li a:hover {
     padding: 10px;
 }
 
+/* mengatur tampilan wrapper paket */
 .packages-wrapper {
     display: flex;
     justify-content: space-around;
 }
 
+/* mengatur tampilan bundle paket */
 .package-bundle {
     display: inline-block;
     width: 30%;
@@ -264,24 +349,21 @@ nav ul li a:hover {
     text-align: center;
 }
 
+/* mengatur tampilan item dalam paket */
 .package-item {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.package-content {
-    border: 1px;
-    padding: 20px;
-    border-radius: 8px;
-}
-
+/* mengatur tampilan ikon material */
 .material-icons {
     font-size: 24px;
     margin-right: 8px;
     margin: 20px;
 }
 
+/* mengatur tampilan caption dalam paket */
 .caption {
     font-size: 20px;
     font-weight: bold;
@@ -290,6 +372,7 @@ nav ul li a:hover {
     text-align: center;
 }
 
+/* mengatur tampilan gambar paket */
 .package-image {
     width: 100%;
     max-width: 300px;
@@ -298,16 +381,19 @@ nav ul li a:hover {
     border-radius: 50px;
 }
 
+/* mengatur tampilan deskripsi paket */
 .package-description {
     margin-top: 10px;
     text-align: center;
 }
 
+/* mengatur tampilan bagian tentang */
 .about-section {
     padding: 25px;
     margin-bottom: 10px;
 }
 
+/* mengatur tampilan judul dalam bagian tentang */
 .about-section h2 {
     font-size: 2rem;
     font-weight: bold;
@@ -315,8 +401,9 @@ nav ul li a:hover {
     text-align: center;
 }
 
+/* mengatur tampilan paragraf dalam bagian tentang */
 .about-section p {
-    color: #f9f9f9;
+    color: #333;
     font-family: "Open Sans", serif;
     font-size: 18px;
     font-style: normal;
@@ -326,6 +413,7 @@ nav ul li a:hover {
     padding: 20px;
 }
 
+/* mengatur tampilan tombol kontak */
 .contact-btn {
     margin: 20px 0;
     padding: 15px 30px;
@@ -342,6 +430,7 @@ nav ul li a:hover {
     font-weight: bolder;
 }
 
+/* mengatur tampilan footer */
 footer {
     width: 100%;
     min-height: 100px;
@@ -355,32 +444,22 @@ footer {
     font-size: 0.9rem;
 }
 
-footer .social_icon,
+/* mengatur tampilan menu dalam footer */
 footer .menu {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px 0;
     flex-wrap: wrap;
+    padding: 0;
 }
 
-footer .social_icon li,
+/* mengatur tampilan item dalam menu footer */
 footer .menu li {
     list-style: none;
 }
 
-footer .social_icon li a {
-    font-size: 2em;
-    color: #fff;
-    margin: 0 10px;
-    display: inline-block;
-    transition: 0.5s;
-}
-
-footer .social_icon li a {
-    transform: translateY(-10px);
-}
-
+/* mengatur tampilan tautan dalam menu footer */
 footer .menu li a {
     font-size: 1.2em;
     color: #fff;
@@ -390,10 +469,12 @@ footer .menu li a {
     opacity: 0.75;
 }
 
+/* mengatur efek hover pada tautan dalam menu footer */
 footer .menu li a:hover {
     opacity: 1;
 }
 
+/* mengatur tampilan paragraf dalam footer */
 footer p {
     color: #000000;
     text-align: center;
@@ -401,30 +482,17 @@ footer p {
     margin-bottom: 10px;
     font-size: 1.1em;
 }
-footer .wave {
-    position: absolute;
-    top: -100px;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: #fff url(wave1.png);
-    background-size: 1000px 100px;
-}
 
-footer .wave#wave1 {
-    z-index: 1000;
-    opacity: 1;
-    bottom: 0;
-    animation: animatewave 3s linear infinite;
-}
-
+/* mengatur tampilan responsif untuk layar kecil */
 @media only screen and (max-width: 768px) {
+    /* mengatur tampilan ikon menu untuk layar kecil */
     .menu-icon {
         display: flex;
         align-items: center;
         cursor: pointer;
     }
     
+    /* mengatur tampilan tautan navigasi untuk layar kecil */
     .nav-links {
         display: none;
         flex-direction: column;
@@ -433,11 +501,11 @@ footer .wave#wave1 {
         background-color: #f9f9f9;
         padding: 20px;
     }
-    
+
     .nav-links li {
         margin-bottom: 20px;
     }
-    
+
     .nav-links.show {
         display: flex;
     }
@@ -446,68 +514,39 @@ footer .wave#wave1 {
         flex-wrap: wrap;
     }
     
+    /* mengatur tampilan daftar menu untuk layar kecil */
     nav ul {
-        flex-direction: column;
-        width: 100%;
+        flex-direction: column; 
+        gap: 1rem; 
     }
-    
+
     nav ul li.active a {
-        color: rgba(162, 103, 103, 0.644);
+        color: rgba(230, 220, 220, 0);
         background-color: rgba(255, 68, 0, 0);
+        /* border-bottom: 1px solid rgba(255, 68, 0, 0.7); */
     }
-    
+
+    /* mengatur tampilan kontainer untuk layar kecil */
     .container {
-        flex-direction: column;
-        align-items: center;
-        margin: 20px;
+        flex-direction: column; 
+        align-items: center; 
     }
-    
-    .form-container {
-        margin: 20px 0;
-        max-width: 90%;
-    }
-    
-    .card-user-wrapper {
-        margin: 10px 0;
-        width: 90%;
-    }
-    
-    .feature {
-        font-size: 16px;
-        margin: 1rem 0;
-        padding: 1rem;
-    }
-    
-    .feature-container {
-        order: 2;
-        font-size: 16px;
-        margin: 1rem 0;
-        padding: 1rem;
-    }
-    
+
+    /* mengatur tampilan wrapper paket untuk layar kecil */
     .packages-wrapper {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; 
+        align-items: center; 
     }
-    
+
+    /* mengatur lebar bundle paket untuk layar kecil */
     .package-bundle {
-        width: 100%;
-        margin: 10px 0;
+        width: 90%; 
     }
 
-    .package-item {
-        justify-content: center;
-        width: 100%;
-        text-align: center;
-    }
-
-    .package-image {
-        width: 100%;
-        height: auto;
-    }
-    
+    /* mengatur ukuran tombol kontak untuk layar kecil */
     .contact-btn {
-        width: 100%;
-        font-size: 1.2rem;
+        font-size: 1.5rem; 
+        width: 100%; 
     }
 }
+    

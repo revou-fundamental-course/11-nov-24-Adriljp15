@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Open Trip Jupen - Home</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -14,7 +14,7 @@
         <section id="home">
             <nav>
                 <div class="logo">
-                    <img src="/assets/foto.jpeg" alt="logo">
+                    <img src="assets/foto.jpeg" alt="logo">
                 </div>
                 <div id="menu-icon" class="menu-icon">
                     <i class="fas fa-bars"></i>
@@ -34,10 +34,24 @@
         <div class="container">
             <div class="card-user-wrapper">
                 <div class="card">
-                    <img src="/assets/about1.jpeg" alt="Tour">
+                    <div class="slider">
+                        <div class="slides">
+                            <div class="slide active">
+                                <img src="assets/about1.jpeg" alt="Banner 1">
+                            </div>
+                            <div class="slide">
+                                <img src="assets/about2.jpeg" alt="Banner 2">
+                            </div>
+                            <div class="slide">
+                                <img src="assets/about3.jpeg" alt="Banner 3">
+                            </div>
+                        </div>
+                        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                    </div>
                     <p>"Vacation fun with my open trip."</p>
                     <div class="user">
-                        <img src="/assets/foto.jpeg" alt="User  ">
+                        <img src="assets/foto.jpeg" alt="User ">
                         <div class="user-info">
                             <p class="username">Deriljupen</p>
                             <p class="user-details">Mahasiswa, 21</p>
@@ -52,33 +66,34 @@
                 <div class="form-container">
                     <h2>Contact Us</h2>
                     <p>Sales will contact you 1X24 hour after we receive the data. Please fill in the form:</p>
+                    <!-- start form validate -->
                     <form id="contactForm" onsubmit="return validateForm()">
                         <div class="form-group">
                             <label for="name">Your Name:</label>
-                            <input type="text" placeholder="Name" required>
-                            <div id="nameError" class="error-message"></div>
+                            <input type="text" id="name" placeholder="Name">
+                            <span id="nameError" class="error-message"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email address:</label>
-                            <input type="email" placeholder="Email" required>
-                            <div id="emailError" class="error-message"></div>
+                            <input type="email" id="email" placeholder="Email">
+                            <span id="emailError" class="error-message"></span>
                         </div>
 
                         <div class="form-group">
-                            <label for="interest">What your interseted in?</label>
-                            <select id="interest" required>
+                            <label for="interest">What are you interested in?</label>
+                            <select id="interest">
                                 <option value="">Select Option</option>
                                 <option value="tour">Tour</option>
                                 <option value="adventure">Adventure</option>
                                 <option value="cultural">Cultural</option>
                                 <option value="other">Other</option>
                             </select>
-                            <div id="interestError" class="error-message"></div>
+                            <span id="interestError" class="error-message"></span>
                         </div>
-
                         <button type="submit">Send</button>
                     </form>
+                    <!-- end of form validate -->
                 </div>
             </section>    
             <!-- end of header right form -->
@@ -86,18 +101,18 @@
             <!-- start feature -->
             <div class="feature-container">
                 <h2>Open Trip Jupen</h2>
-                <i>Experienced in <span style="color: yellow"> 10+</span> intercity trips in Indonesia</i>
+                <i>Berpengalaman lebih dari <span style="color: yellow">10+</span> Perjalanan di Indonesia</i>
                 <div class="feature">
-                  <span class="number">1</span>
-                  <span class="feature-text">Special offers for you on every trip with us!</span>
+                    <span class="number">1</span>
+                    <span class="feature-text">Special offers for you on every trip with us!</span>
                 </div>
                 <div class="feature">
-                  <span class="number">2</span>
-                  <span class="feature-text">Excitement, togetherness and moments!</span>
+                    <span class="number">2</span>
+                    <span class="feature-text">Excitement, togetherness and moments!</span>
                 </div>
                 <div class="feature">
-                  <span class="number">3</span>
-                  <span class="feature-text">we are ready and willing to take you around the beauty of nature!</span>
+                    <span class="number">3</span>
+                    <span class="feature-text">We are ready and willing to take you around the beauty of nature!</span>
                 </div>
             </div>  
             <!-- end of feature -->
@@ -106,7 +121,7 @@
         <!-- start package -->
         <section id="packages">
             <div class="package">
-                <h2 class="packages-tittle">Our Packages</h2>
+                <h2 class="packages-title">Our Packages</h2>
                 <div class="packages-wrapper">
                     <div class="package-bundle">
                         <div class="package-item">
@@ -114,8 +129,8 @@
                             <p class="caption">Bali</p>
                         </div>
                         <div>
-                            <img src="/assets/bali.jpeg" alt="Bali" class="package-image">
-                            <p class="package-description">A pleasant trip to the city of Bali that you can get a variety of beautiful moments that will be immortalized.</p>
+                            <img src="assets/bali.jpeg" alt="Bali" class="package-image">
+                            <p class="package-description">Deskripsi untuk paket pertama. Jelaskan manfaat dan fitur yang ditawarkan.</p>
                         </div>
                     </div>
                     <div class="package-bundle">
@@ -124,8 +139,8 @@
                             <p class="caption">Bandung</p>
                         </div>
                         <div>
-                            <img src="/assets/bandung.jpeg" alt="Bandung" class="package-image">
-                            <p class="package-description">a pleasant trip to the quiet city of bandung. you can get a trip that is not available in other cities.</p>
+                            <img src="assets/bandung.jpeg" alt="Bandung" class="package-image">
+                            <p class="package-description">Deskripsi untuk paket kedua. Jelaskan manfaat dan fitur yang ditawarkan.</p>
                         </div>
                     </div>
                     <div class="package-bundle">
@@ -134,8 +149,8 @@
                             <p class="caption">Mount Merbabu</p>
                         </div>
                         <div> 
-                            <img src="/assets/merbabu.jpeg" alt="Mount Merbabu" class="package-image">
-                            <p class="package-description">hike to Mount Merbabu, with various stories, experiences and also togetherness.</p>
+                            <img src="assets/merbabu.jpeg" alt="Mount Merbabu" class="package-image">
+                            <p class="package-description">Deskripsi untuk paket ketiga. Jelaskan manfaat dan fitur yang ditawarkan.</p>
                         </div>
                     </div>            
                 </div>
@@ -159,13 +174,13 @@
                 <li><a href="#packages">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <p>© Code with Open Trip Jupen | All right reserved</p>
+            <p>© Code with Open Trip Jupen | All rights reserved</p>
         </footer>
         <!-- end of footer -->
         
     </div>
     
-    <script src="/script.js"></script> 
+    <script src="js/script.js" defer></script> 
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
